@@ -1,2 +1,3 @@
-devtools\bin\vpc.exe /MUTATION /define:SOURCESDK +shaders /mksln shaders.sln
+@echo off
+devtools\bin\vpc.exe /2015 /hl2mp +shaders /mksln shaders.sln
 pause

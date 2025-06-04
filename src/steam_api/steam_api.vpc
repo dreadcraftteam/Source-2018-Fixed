@@ -21,7 +21,7 @@ $Configuration
 	}
 }
 
-$Project "steam_api"
+$Project "Steam API"
 {
 	$Folder	"Source Files"
 	{

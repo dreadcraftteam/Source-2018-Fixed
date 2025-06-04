@@ -22,7 +22,7 @@ $Configuration
 	}
 }
 
-$Project "SceneFileCache"
+$Project "Scene File Cache"
 {
 	$Folder	"Source Files"
 	{

@@ -44,7 +44,7 @@ $Configuration
 
 $Macro REPLAY_COMMON_HEADERS_TITLE	"replay_common.lib headers"
 
-$Project "replay"
+$Project "Replay"
 {
 	$Include "$SRCDIR\replay\common\headers.vpc"
 

@@ -17,7 +17,7 @@ $Configuration
 	}
 }
 
-$Project "Newdat"
+$Project "NewDat"
 {
 	$Folder	"Source Files"
 	{

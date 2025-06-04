@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "AdminServer"
+$Project "Admin Server"
 {
 	$Folder	"Source Files"
 	{

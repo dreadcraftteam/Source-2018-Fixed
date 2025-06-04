@@ -19,7 +19,7 @@ $Configuration
 	}
 }
 
-$Project "vgui_controls"
+$Project "VGUI Controls"
 {
 	$Folder	"Source Files"
 	{

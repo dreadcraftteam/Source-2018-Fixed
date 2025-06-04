@@ -33,7 +33,7 @@ $Configuration
 	}
 }
 
-$Project "vphysics"
+$Project "VPhysics"
 {
 	$Folder	"Source Files"
 	{

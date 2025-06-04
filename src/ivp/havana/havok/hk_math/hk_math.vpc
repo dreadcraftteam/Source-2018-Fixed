@@ -113,7 +113,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "hk_math"
+$Project "HK Math"
 {
 	$Folder	"lcp"
 	{

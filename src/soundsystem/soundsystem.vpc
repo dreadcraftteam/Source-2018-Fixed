@@ -22,7 +22,7 @@ $Configuration
 	}
 }
 
-$Project "Soundsystem"
+$Project "Sound System"
 {
 	$Folder	"Source Files"
 	{
@@ -59,6 +59,5 @@ $Project "Soundsystem"
 		$Lib tier2
 		$File	"$SRCDIR\dx9sdk\lib\dsound.lib"
 		$File	"$SRCDIR\dx9sdk\lib\dxguid.lib"
-		$File	"$SRCDIR\lib\common\mss32.lib"
 	}
 }

@@ -16,7 +16,7 @@ $Configuration
 	}
 }
 
-$Project "vtf"
+$Project "VTF"
 {
 	$Folder	"Source Files"
 	{

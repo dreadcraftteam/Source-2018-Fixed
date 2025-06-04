@@ -125,6 +125,8 @@ public:
 	virtual IIndexBuffer *GetDynamicIndexBuffer( MaterialIndexFormat_t fmt, bool bBuffered = true );
 	virtual void SetHardwareGammaRamp( float fGamma, float fGammaTVRangeMin, float fGammaTVRangeMax, float fGammaTVExponent, bool bTVEnabled );
 
+	virtual char* GetDisplayDeviceName() { return ""; }
+
 	// A special path used to tick the front buffer while loading on the 360
 	virtual void EnableNonInteractiveMode( MaterialNonInteractiveMode_t mode, ShaderNonInteractiveInfo_t *pInfo ) {}
 	virtual void RefreshFrontBufferNonInteractive( ) {}

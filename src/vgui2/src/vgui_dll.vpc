@@ -28,7 +28,7 @@ $Configuration
 	}
 }
 
-$Project "vgui2"
+$Project "VGUI"
 {
 	$Folder	"Source Files"
 	{

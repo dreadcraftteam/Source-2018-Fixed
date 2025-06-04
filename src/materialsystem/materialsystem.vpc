@@ -39,7 +39,7 @@ $Configuration "Release"
 	}
 }
 
-$Project "MaterialSystem"
+$Project "Material System"
 {
 	$Folder	"Source Files"
 	{

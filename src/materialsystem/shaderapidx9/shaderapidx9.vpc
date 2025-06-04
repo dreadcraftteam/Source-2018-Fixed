@@ -50,7 +50,7 @@ $Configuration "Release"
 	}
 }
 
-$Project "shaderapidx9"
+$Project "ShaderAPIdx9"
 {
 	$Folder	"Source Files"
 	{

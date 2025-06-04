@@ -24,7 +24,7 @@ $Configuration
 	}
 }
 
-$Project "bsppack"
+$Project "BSP Pack"
 {
 	$Folder	"Source Files"
 	{

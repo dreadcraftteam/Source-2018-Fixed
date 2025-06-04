@@ -1,2 +1,3 @@
-devtools\bin\vpc.exe /MUTATION /define:SOURCESDK +everything /mksln everything.sln
+@echo off
+devtools\bin\vpc.exe /2015 /hl2mp +everything /mksln everything.sln
 pause

@@ -19,7 +19,7 @@ $Configuration
 	}
 }
 
-$Project "vaudio_minimp3"
+$Project "VAudio MiniMP3"
 {
 	$Folder	"Source Files"
 	{

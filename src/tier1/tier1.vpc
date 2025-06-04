@@ -21,7 +21,7 @@ $Configuration
 	}
 }
 
-$Project "tier1"
+$Project "Tier 1"
 {
 	$Folder	"Source Files"
 	{

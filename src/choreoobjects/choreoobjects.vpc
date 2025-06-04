@@ -16,7 +16,7 @@ $Configuration
 	}
 }
 
-$Project "choreoobjects"
+$Project "Choreo Objects"
 {
 	$Folder	"Source Files"
 	{

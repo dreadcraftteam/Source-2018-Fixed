@@ -24,7 +24,7 @@ $Configuration
 	}
 }
 
-$Project "shaderapiempty"
+$Project "ShaderAPI Empty"
 {
 	$Folder	"Source Files"
 	{

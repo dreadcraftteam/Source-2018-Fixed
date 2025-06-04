@@ -106,7 +106,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "ivp_compactbuilder"
+$Project "IVP Compact Builder"
 {
 	$Folder	"IVP_COMPACT_BUILDER"
 	{

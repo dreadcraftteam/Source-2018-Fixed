@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Texturecompile_dll"
+$Project "TextureCompile DLL"
 {
 	$Folder	"Source Files"
 	{

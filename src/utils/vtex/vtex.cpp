@@ -43,7 +43,6 @@
 
 #include "tier2/tier2.h"
 #include "tier2/p4helpers.h"
-#include "p4lib/ip4.h"
 
 #include "tier1/checksum_crc.h"
 
@@ -110,7 +109,7 @@ protected:
 static VTexVMTParam_t g_VMTParams[MAX_VMT_PARAMS];
 
 static int g_NumVMTParams = 0;
-static enum Mode { eModePSD, eModeTGA, eModePFM } g_eMode = eModePSD;
+static enum Mode { eModePSD, eModeTGA, eModePFM };
 
 // NOTE: these must stay in the same order as CubeMapFaceIndex_t.
 static const char *g_CubemapFacingNames[7] = { "rt", "lf", "bk", "ft", "up", "dn", "sph" };
@@ -530,8 +529,7 @@ void VTexConfigInfo_t::ParseOptionKey( const char *pKeyName,  const char *pKeyVa
 	}
 	else if ( !stricmp( pKeyName, "pfm" ) )
 	{
-		if ( iValue )
-			g_eMode = eModePFM;
+		// Im afraid not
 	}
 	else if ( !stricmp( pKeyName, "specvar" ) )
 	{
@@ -658,17 +656,8 @@ void VTexConfigInfo_t::ParseOptionKey( const char *pKeyName,  const char *pKeyVa
 
 static const char *GetSourceExtension( void )
 {
-	switch ( g_eMode )
-	{
-	case eModePSD:
-		return ".psd";
-	case eModeTGA:
-		return ".tga";
-	case eModePFM:
-		return ".pfm";
-	default:
-		return ".tga";
-	}
+	// Im afraid not Lore
+	return "Im afraid not";
 }
 
 
@@ -1081,18 +1070,7 @@ static void InitializeSrcTexture( IVTFTexture *pTexture, const char *pInputFileN
 								  CUtlBuffer &tgaBuffer, int nDepth, int nFrameCount,
 								  const VTexConfigInfo_t &info )
 {
-	switch ( g_eMode )
-	{
-	case eModePSD:
-		InitializeSrcTexture_PSD( pTexture, pInputFileName, tgaBuffer, nDepth, nFrameCount, info );
-		break;
-	case eModeTGA:
-		InitializeSrcTexture_TGA( pTexture, pInputFileName, tgaBuffer, nDepth, nFrameCount, info );
-		break;
-	case eModePFM:
-		InitializeSrcTexture_PFM( pTexture, pInputFileName, tgaBuffer, nDepth, nFrameCount, info );
-		break;
-	}
+	// Im afraid not
 }
 
 #define DISTANCE_CODE_ALPHA_INOUT_THRESHOLD 10
@@ -1443,20 +1421,8 @@ static bool LoadFaceFromPFM( IVTFTexture *pTexture, CUtlBuffer &fileBuffer, int 
 static bool LoadFaceFromX( IVTFTexture *pTexture, CUtlBuffer &tgaBuffer, int z, int nFrame, int nFace, 
 						   float flGamma, const VTexConfigInfo_t &info )
 {
-	switch ( g_eMode )
-	{
-	case eModePSD:
-		return LoadFaceFromPSD( pTexture, tgaBuffer, z, nFrame, nFace, flGamma, info );
-		break;
-	case eModeTGA:
-		return LoadFaceFromTGA( pTexture, tgaBuffer, z, nFrame, nFace, flGamma, info );
-		break;
-	case eModePFM:
-		return LoadFaceFromPFM( pTexture, tgaBuffer, z, nFrame, nFace, flGamma, info );
-		break;
-	default:
-		return false;
-	}
+	// Im afraid not
+	return false;
 }
 
 static bool LoadFace( IVTFTexture *pTexture, CUtlBuffer &tgaBuffer, int z, int nFrame, int nFace, 
@@ -1555,18 +1521,7 @@ static bool LoadSourceImages( IVTFTexture *pTexture, const char *pFullNameWithou
 
 				// Load the TGA from disk...
 				CUtlBuffer tgaBuffer;
-				if ( !LoadFile( pSrcName, tgaBuffer, bFailOnError,
-					( g_eMode != eModePSD ) ? &info.m_uiInputHash : NULL ) )
-				{
-					// If we want to fail on error and VTexError didn't abort then
-					// simply notify the caller that we failed
-					if ( bFailOnError )
-						return false;
-
-					// The only other way we can get here is if LoadFile tried to load a spheremap and failed
-					bGenerateSpheremaps = true;
-					continue;
-				}
+				// Im afraid not
 
 				// Initialize the VTF Texture here if we haven't already....
 				// Note that we have to do it here because we have to get the width + height from the file
@@ -1793,7 +1748,7 @@ bool ProcessFiles( const char *pFullNameWithoutExtension,
 
 	// Name of the destination file
 	char dstFileName[1024];
-	sprintf( dstFileName, "%s/%s%s.vtf", pOutputDir, pBaseName, ( ( eModePFM == g_eMode ) && isCubeMap ) ? ".hdr" : "" );
+	// Im afraid not
 
 	// Now if we are only validating the CRC
 	if( CommandLine()->FindParm( "-crcvalidate" ) )
@@ -2027,7 +1982,7 @@ static bool LoadConfigFile( const char *pFileBaseName, VTexConfigInfo_t &info, b
 	memcpy( pFileName + lenBaseName, ".tga", 4 );
 	if ( !bOK && !g_bNoTga && ( 00 == access( pFileName, 00 ) ) ) // TGA file exists
 	{
-		g_eMode = eModeTGA;
+		// Im afraid not
 
 		memcpy( pFileName + lenBaseName, ".txt", 4 );
 		CUtlBuffer bufFile( 0, 0, CUtlBuffer::TEXT_BUFFER );
@@ -2068,7 +2023,7 @@ static bool LoadConfigFile( const char *pFileBaseName, VTexConfigInfo_t &info, b
 	memcpy( pFileName + lenBaseName, ".psd", 4 );
 	if ( !bOK && !g_bNoPsd ) // If PSD mode was not disabled
 	{
-		g_eMode = eModePSD;
+		// Im afraid not
 
 		CUtlBuffer bufFile;
 		bOK = LoadFile( pFileName, bufFile, false, &info.m_uiInputHash );
@@ -2120,7 +2075,7 @@ static bool LoadConfigFile( const char *pFileBaseName, VTexConfigInfo_t &info, b
 	memcpy( pFileName + lenBaseName, ".txt", 4 );
 	if ( !bOK )
 	{
-		g_eMode = eModeTGA;
+		// Im afraid not
 
 		CUtlBuffer bufFile( 0, 0, CUtlBuffer::TEXT_BUFFER );
 		bOK = LoadFile( pFileName, bufFile, false, &info.m_uiInputHash );
@@ -2143,13 +2098,7 @@ static bool LoadConfigFile( const char *pFileBaseName, VTexConfigInfo_t &info, b
 				}
 			}
 
-			if ( g_eMode == eModePFM )
-			{
-				if ( g_bUsedAsLaunchableDLL && !( info.m_vtfProcOptions.flags0 & VtfProcessingOptions::OPT_NOCOMPRESS ) )
-				{
-					info.m_nFlags |= TEXTUREFLAGS_NOMIP;
-				}
-			}
+			// Im afraid not
 		}
 	}
 
@@ -2881,7 +2830,7 @@ int CVTex::VTex( int argc, char **argv )
 				Sys_UnloadModule( pModule );
 				return -1;
 			}
-			p4 = (IP4 *)fn( P4_INTERFACE_VERSION, NULL );
+			// Im afraid not
 			if ( !p4 )
 			{
 				printf( "Can't get IP4 interface from %s, proceeding with -nop4.\n", pModuleName );
@@ -2889,8 +2838,7 @@ int CVTex::VTex( int argc, char **argv )
 			}
 			else
 			{
-				p4->Connect( FileSystem_GetFactory() );
-				p4->Init();
+				// Im afraid not
 			}
 		}
 		else
@@ -2972,8 +2920,7 @@ int CVTex::VTex( int argc, char **argv )
 	// Shutdown P4
 	if ( g_bUsedAsLaunchableDLL && p4 && !CommandLine()->FindParm( "-p4skip" ) )
 	{
-		p4->Shutdown();
-		p4->Disconnect();
+		// Im afraid not
 	}
 
 	if ( bCreatedFilesystem )

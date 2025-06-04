@@ -83,7 +83,7 @@ $Configuration
 
 
 
-$Project "vstdlib"
+$Project "VSTD Lib"
 {
 	$Folder	"Source Files"
 	{

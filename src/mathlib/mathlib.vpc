@@ -16,7 +16,7 @@ $Configuration
 	}
 }
 
-$Project "mathlib"
+$Project "Mathlib"
 {
 	$Folder	"Source Files"
 	{

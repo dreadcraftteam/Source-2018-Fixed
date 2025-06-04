@@ -116,7 +116,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "ivp_physics"
+$Project "IVP Physics"
 {
 	$Folder	"IVP_COLLISION"
 	{

@@ -19,7 +19,7 @@ $Configuration
 	}
 }
 
-$Project "replay_common"
+$Project "Replay Common"
 {
 	$Folder	"Source Files"
 	{

@@ -62,7 +62,7 @@ $Configuration "Release"
 }
 
 
-$Project "engine"
+$Project "Engine"
 {
 	$Folder "Client"
 	{

@@ -134,7 +134,12 @@ public:
 	virtual void BindVertexBuffer( int nStreamID, IVertexBuffer *pVertexBuffer, int nOffsetInBytes, int nFirstVertex, int nVertexCount, VertexFormat_t fmt, int nRepetitions = 1 );
 	virtual void BindIndexBuffer( IIndexBuffer *pIndexBuffer, int nOffsetInBytes );
 	virtual void Draw( MaterialPrimitiveType_t primitiveType, int nFirstIndex, int nIndexCount );
-
+	virtual void CopyRenderTargetScratchTexture();
+	virtual void LockRect();
+	virtual void UnlockRect();
+	virtual void TexLodClamp();
+	virtual void TexLodBias();
+	virtual void CopyTextureToTexture();
 	// Methods of IShaderDynamicAPI
 public:
 	virtual void GetBackBufferDimensions( int& nWidth, int& nHeight ) const;

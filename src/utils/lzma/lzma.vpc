@@ -18,7 +18,7 @@ $Configuration
 	}
 }
 
-$Project "lzma"
+$Project "Lzma"
 {
 	$Folder	"Source Files"
 	{

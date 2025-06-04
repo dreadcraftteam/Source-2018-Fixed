@@ -9,7 +9,7 @@ $macro SRCDIR		"..\.."
 $include "$SRCDIR\vpc_scripts\source_lib_base.vpc"
 
 
-$Project "vgui_surfacelib"
+$Project "VGUI Surface Lib"
 {
 	$Folder	"Source Files"
 	{

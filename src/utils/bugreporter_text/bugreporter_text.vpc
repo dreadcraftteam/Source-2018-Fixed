@@ -43,7 +43,6 @@ $Project "Bugreporter_text"
 		$File	"$SRCDIR\public\tier0\protected_things.h"
 		$File	"$SRCDIR\public\string_t.h"
 		$File	"$SRCDIR\public\tier1\strtools.h"
-		$File	"..\bugreporter\trktool.h"
 		$File	"$SRCDIR\public\tier1\utlmemory.h"
 		$File	"$SRCDIR\public\tier1\utlrbtree.h"
 		$File	"$SRCDIR\public\vstdlib\vstdlib.h"
@@ -52,6 +51,5 @@ $Project "Bugreporter_text"
 	$Folder	"Link Libraries"
 	{
 		$File	"$SRCDIR\lib\common\expdlln.lib"
-		$File	"$SRCDIR\lib\common\trktooln.lib"
 	}
 }

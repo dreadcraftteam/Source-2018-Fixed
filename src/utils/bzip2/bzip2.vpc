@@ -17,7 +17,7 @@ $Configuration
 	}
 }
 
-$Project "Bzip2"
+$Project "BZIP2"
 {
 	$Folder	"Source Files"
 	{

@@ -301,25 +301,6 @@ static void CommitSetRasterState( ID3D10Device *pDevice, const ShaderStateDx10_t
 	}																		
 }
 
-
-//-----------------------------------------------------------------------------
-//
-// Shader API Dx10
-//
-//-----------------------------------------------------------------------------
-
-//-----------------------------------------------------------------------------
-// Class Factory
-//-----------------------------------------------------------------------------
-static CShaderAPIDx10 s_ShaderAPIDx10;
-CShaderAPIDx10* g_pShaderAPIDx10 = &s_ShaderAPIDx10;
-
-EXPOSE_SINGLE_INTERFACE_GLOBALVAR( CShaderAPIDx10, IShaderAPI, 
-								  SHADERAPI_INTERFACE_VERSION, s_ShaderAPIDx10 )
-
-EXPOSE_SINGLE_INTERFACE_GLOBALVAR( CShaderAPIDx10, IDebugTextureInfo, 
-								  DEBUG_TEXTURE_INFO_VERSION, s_ShaderAPIDx10 )
-
 								  
 //-----------------------------------------------------------------------------
 // Constructor, destructor

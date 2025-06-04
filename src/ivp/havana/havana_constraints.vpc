@@ -94,7 +94,7 @@ $Configuration "Release"
 	}
 }
 
-$Project "havana_constraints"
+$Project "Havana Constraints"
 {
 	$Folder	"hk_physics (havana)"
 	{

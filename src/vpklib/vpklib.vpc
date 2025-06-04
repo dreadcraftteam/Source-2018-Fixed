@@ -15,7 +15,7 @@ $Configuration
 	}
 }
 
-$Project "vpklib"
+$Project "VPK Lib"
 {
 	$Folder	"Source Files"
 	{

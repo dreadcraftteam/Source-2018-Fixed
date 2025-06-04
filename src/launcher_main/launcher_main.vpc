@@ -95,7 +95,7 @@ $Project
 	}
 }
 
-$Project "launcher_main"
+$Project "Launcher Main"
 {
 	$Folder	"Source Files"
 	{

@@ -52,7 +52,7 @@ $Configuration
 	}
 }
 
-$Project "FileSystem_Stdio"
+$Project "FileSystem Stdio"
 {
 	$Folder	"Source Files"
 	{

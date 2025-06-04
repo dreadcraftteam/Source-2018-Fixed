@@ -29,7 +29,7 @@ $Configuration
 	}
 }
 
-$Project "video_services"
+$Project "Video Services"
 {
 	$Folder	"Source Files"
 	{

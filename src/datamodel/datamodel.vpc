@@ -17,7 +17,7 @@ $Configuration
 	}
 }
 
-$Project "Datamodel"
+$Project "Data Model"
 {
 	$Folder	"Source Files"
 	{

@@ -22,7 +22,7 @@ $Configuration
 }
 
 
-$Project "datacache"
+$Project "Data Cache"
 {
 	$Folder	"Source Files"
 	{

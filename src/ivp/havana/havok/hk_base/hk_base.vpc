@@ -108,7 +108,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "hk_base"
+$Project "HK Base"
 {
 	$Folder	"memory"
 	{

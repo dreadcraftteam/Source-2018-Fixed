@@ -18,7 +18,7 @@ $Configuration
 	}
 }
 
-$Project "bitmap"
+$Project "Bitmap"
 {
 	$Folder	"Source Files"
 	{

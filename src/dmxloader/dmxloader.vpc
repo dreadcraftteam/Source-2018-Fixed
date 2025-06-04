@@ -16,7 +16,7 @@ $Configuration
 	}
 }
 
-$Project "Dmxloader"
+$Project "DMX Loader"
 {
 	$Folder	"Source Files"
 	{

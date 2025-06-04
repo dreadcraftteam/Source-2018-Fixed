@@ -57,7 +57,7 @@ $Configuration
 	}
 }
 
-$Project "stdshader_dx9"
+$Project "STDShader DX9"
 {
 	$Folder	"Source Files"
 	{

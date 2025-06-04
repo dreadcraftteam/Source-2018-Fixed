@@ -1,2 +1,3 @@
-devtools\bin\vpc.exe /MUTATION /define:SOURCESDK +game /mksln games.sln
+@echo off
+devtools\bin\vpc.exe /2015 /hl2mp +game /mksln games.sln
 pause

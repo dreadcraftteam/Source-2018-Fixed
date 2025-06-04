@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "vaudio_celt"
+$Project "VAudio Celt"
 {
 	$Folder	"Source Files"
 	{

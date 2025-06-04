@@ -15,7 +15,7 @@ $Configuration
 	}
 }
 
-$Project "Dmserializers"
+$Project "DM Serializers"
 {
 	$Folder	"Source Files"
 	{

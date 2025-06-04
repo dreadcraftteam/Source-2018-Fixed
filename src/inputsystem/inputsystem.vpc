@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "inputsystem"
+$Project "Input System"
 {
 	$Folder	"Source Files"
 	{

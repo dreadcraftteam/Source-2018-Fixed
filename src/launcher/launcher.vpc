@@ -47,7 +47,7 @@ $Configuration "Release"
 	}
 }
 
-$Project "launcher"
+$Project "Launcher"
 {
 	$Folder	"Source Files"
 	{

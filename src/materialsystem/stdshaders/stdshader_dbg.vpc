@@ -54,7 +54,7 @@ $Configuration
 	}
 }
 
-$Project "stdshader_dbg"
+$Project "STDShader DBG"
 {
 	$Folder	"Source Files"
 	{

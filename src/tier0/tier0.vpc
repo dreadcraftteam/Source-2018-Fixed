@@ -100,7 +100,7 @@ $Project
 	}
 }
 
-$Project "tier0"
+$Project "Tier 0"
 {
 	$Folder	"Source Files"
 	{
