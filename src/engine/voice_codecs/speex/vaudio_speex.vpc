@@ -22,7 +22,7 @@ $Configuration
 	}
 }
 
-$Project "vaudio_speex"
+$Project "VAudio Speex"
 {
 	$Folder	"Source Files"
 	{
