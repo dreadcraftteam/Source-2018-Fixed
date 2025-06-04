@@ -17,6 +17,7 @@ $Group "game"
 
 $Group "everything"
 {
+	"appframework"
 	"AdminServer"
 	"bsppack"
 	"bugreporter"
