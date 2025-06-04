@@ -1347,7 +1347,7 @@ $Project "video_quicktime"
 
 $Project "video_webm"
 {
-	"video\video_webm.vpc" [$LINUX]
+	"video\video_webm.vpc" [$WINDOWS||$LINUX]
 }
 
 $Project "vguimatsurface"
