@@ -742,6 +742,7 @@ bool CBaseServer::ProcessConnectionlessPacket(netpacket_t * packet)
 // 				}
 
 				if ( authProtocol == PROTOCOL_STEAM )
+#if 0
 				{
 					int keyLen = msg.ReadShort();
 					if ( keyLen < 0 || keyLen > sizeof(cdkey) )
@@ -754,6 +755,7 @@ bool CBaseServer::ProcessConnectionlessPacket(netpacket_t * packet)
 					ConnectClient( packet->from, protocol, challengeNr, clientChallenge, authProtocol, name, password, cdkey, keyLen );	// cd key is actually a raw encrypted key	
 				}
 				else
+#endif
 				{
 					msg.ReadString( cdkey, sizeof(cdkey) );
 					ConnectClient( packet->from, protocol, challengeNr, clientChallenge, authProtocol, name, password, cdkey, strlen(cdkey) );
@@ -1434,11 +1436,13 @@ bool CBaseServer::CheckChallengeType( CBaseClient * client, int nNewUserID, neta
 		return false;
 	}
 
+#if 0 
 	if ( ( nAuthProtocol == PROTOCOL_HASHEDCDKEY ) && (Q_strlen( pchLogonCookie ) <= 0 ||  Q_strlen(pchLogonCookie) != 32 ) )
 	{
 		RejectConnection( adr, clientChallenge, "#GameUI_ServerRejectInvalidCertLen" );
 		return false;
 	}
+#endif
 
 	Assert( !IsReplay() );
 
@@ -1470,24 +1474,26 @@ bool CBaseServer::CheckChallengeType( CBaseClient * client, int nNewUserID, neta
 		client->SetSteamID( CSteamID() ); // set an invalid SteamID
 
 		// Convert raw certificate back into data
+#if 0
 		if ( cbCookie <= 0 || cbCookie >= STEAM_KEYSIZE )
 		{
 			RejectConnection( adr, clientChallenge, "#GameUI_ServerRejectInvalidSteamCertLen" );
 			return false;
 		}
+#endif
 		netadr_t checkAdr = adr;
 		if ( adr.GetType() == NA_LOOPBACK || adr.IsLocalhost() )
 		{
 			checkAdr.SetIP( net_local_adr.GetIPHostByteOrder() );
 		}
-
+#if 0
 		if ( !Steam3Server().NotifyClientConnect( client, nNewUserID, checkAdr, pchLogonCookie, cbCookie ) 
 			&& !Steam3Server().BLanOnly() ) // the userID isn't alloc'd yet so we need to fill it in manually
 		{
 			RejectConnection( adr, clientChallenge, "#GameUI_ServerRejectSteam" );
 			return false;
 		}
-
+#endif
 		//
 		// Any rejections below this must call SendUserDisconnect
 		//

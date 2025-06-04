@@ -1388,11 +1388,13 @@ bool CGameServer::FinishCertificateCheck( netadr_t &adr, int nAuthProtocol, cons
 		if ( AllowDebugDedicatedServerOutsideSteam() )
 			return true;
 
+#if 0
 		if ( !Host_IsSinglePlayerGame() || sv.IsDedicated()) // PROTOCOL_HASHEDCDKEY isn't allowed for multiplayer servers
 		{
 			RejectConnection( adr, clientChallenge, "#GameUI_ServerCDKeyAuthInvalid" );
 			return false;
 		}
+#endif
 
 		if ( Q_strlen( szRawCertificate ) != 32 )
 		{
