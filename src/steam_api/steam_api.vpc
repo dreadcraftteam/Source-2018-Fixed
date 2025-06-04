@@ -1,0 +1,37 @@
+//-----------------------------------------------------------------------------
+//	STEAM_API.VPC
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR ".."
+$Macro OUTBINDIR "..\..\game\bin"
+$Macro BINNAME "steam_api"
+
+$Include "$SRCDIR\vpc_scripts\source_dll_base.vpc"
+
+$Configuration
+{
+	$General
+	{
+		$AdditionalProjectDependencies			"$BASE;"
+	}
+
+	$Compiler
+	{
+		$PreprocessorDefinitions		"$BASE;SOURCEVR_DLL;VERSION_SAFE_STEAM_API_INTERFACES"
+	}
+}
+
+$Project "steam_api"
+{
+	$Folder	"Source Files"
+	{
+		$File	"stub.cpp"
+	}
+
+	$Folder	"Link Libraries"
+	{
+		$Lib mathlib
+		$Lib tier1
+		$Lib appframework
+	}
+}
