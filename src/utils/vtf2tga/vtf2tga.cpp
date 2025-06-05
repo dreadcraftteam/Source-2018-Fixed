@@ -110,12 +110,12 @@ int main( int argc, char **argv )
 	}
 
 	fseek( vtfFp, 0, SEEK_END );
-	int srcVTFLength = ftell( vtfFp );
+	int srcVTFLength = (int)ftell( vtfFp );
 	fseek( vtfFp, 0, SEEK_SET );
 
 	CUtlBuffer buf;
 	buf.EnsureCapacity( srcVTFLength );
-	int nBytesRead = fread( buf.Base(), 1, srcVTFLength, vtfFp );
+	int nBytesRead = (int)fread( buf.Base(), 1, srcVTFLength, vtfFp );
 	fclose( vtfFp );
 	buf.SeekPut( CUtlBuffer::SEEK_HEAD, nBytesRead );
 

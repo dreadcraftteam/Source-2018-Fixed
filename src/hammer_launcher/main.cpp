@@ -21,7 +21,6 @@
 #include "vgui/ISurface.h"
 #include "inputsystem/iinputsystem.h"
 #include "tier0/icommandline.h"
-#include "p4lib/ip4.h"
 
 //-----------------------------------------------------------------------------
 // Global systems
@@ -101,12 +100,6 @@ bool CHammerApp::Create( )
 	if ( !AddSystems( appSystems ) ) 
 		return false;
 
-	// Add Perforce separately since it's possible it isn't there. (SDK)
-	if ( !CommandLine()->CheckParm( "-nop4" ) )
-	{
-		AppModule_t p4Module = LoadModule( "p4lib.dll" );
-		AddSystem( p4Module, P4_INTERFACE_VERSION );
-	}
 	// Connect to interfaces loaded in AddSystems that we need locally
 	g_pMaterialSystem = (IMaterialSystem*)FindSystem( MATERIAL_SYSTEM_INTERFACE_VERSION );
 	g_pHammer = (IHammer*)FindSystem( INTERFACEVERSION_HAMMER );

@@ -45,7 +45,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "Vpk"
+$Project "VPK"
 {
 	$Folder "Source Files"
 	{

@@ -47,7 +47,7 @@ $Configuration
 }
 
 
-$Project "stdshader_dx8"
+$Project "STDShader DX8"
 {
 	$Folder	"Source Files"
 	{

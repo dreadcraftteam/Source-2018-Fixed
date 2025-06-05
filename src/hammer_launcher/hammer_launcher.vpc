@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Hammer_launcher"
+$Project "Hammer (Launcher)"
 {
 	$Folder	"Source Files"
 	{

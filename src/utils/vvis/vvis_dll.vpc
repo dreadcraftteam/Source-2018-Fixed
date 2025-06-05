@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Vvis_dll"
+$Project "VVIS"
 {
 	$Folder	"Source Files"
 	{

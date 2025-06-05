@@ -42,7 +42,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "hammer_dll"
+$Project "Hammer"
 {
 	$Folder	"Source Files"
 	{

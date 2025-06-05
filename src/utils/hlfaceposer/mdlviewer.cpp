@@ -67,7 +67,6 @@
 #include "vguiwnd.h"
 #include "vgui_controls/Frame.h"
 #include "vgui/ISurface.h"
-#include "p4lib/ip4.h"
 #include "tier2/p4helpers.h"
 #include "ProgressDialog.h"
 #include "scriplib.h"
@@ -2499,7 +2498,7 @@ bool CHLFacePoserApp::Create()
 	AppModule_t p4Module = LoadModule( "p4lib.dll" );
 	if ( p4Module != APP_MODULE_INVALID )
 	{
-		AddSystem( p4Module, P4_INTERFACE_VERSION );
+		// I`m afraid not...
 	}
 
 	g_Factory = GetFactory();
@@ -2741,12 +2740,8 @@ int main (int argc, char *argv[])
 	// Set game info directory suggestion callback
 	SetSuggestGameInfoDirFn( CHLFacePoserApp_SuggestGameInfoDirFn );
 
- 	CHLFacePoserApp hlFacePoserApp;
-	CSteamApplication steamApplication( &hlFacePoserApp );
-	int nRetVal = steamApplication.Run();
-
 	CoUninitialize();
 
-	return nRetVal;
+	return NULL;
 }
 

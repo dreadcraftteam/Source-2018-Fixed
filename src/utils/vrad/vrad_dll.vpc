@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Vrad_dll"
+$Project "VRAD"
 {
 	$Folder	"Source Files"
 	{

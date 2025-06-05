@@ -4,6 +4,7 @@
 //	Group Configurations for all Source(TM) Projects
 //-----------------------------------------------------------------------------
 
+// For Fast Compile
 $Group "game"
 {
 	"client"
@@ -15,6 +16,7 @@ $Group "game"
 	"vgui_controls"
 }
 
+// Everything Projects?
 $Group "everything"
 {
 	"appframework"
@@ -38,6 +40,7 @@ $Group "everything"
 	"soundemittersystem"
 	"soundsystem"
 	"stdshader_dbg"
+	"stdshader_dx8"
 	"stdshader_dx9"
 	"steam_api"
 	"studiorender"
@@ -87,6 +90,7 @@ $Group "everything"
 	"server"
 }
 
+// Dedicated Server Compile
 $Group "dedicated"
 {
 	"dedicated"
@@ -96,8 +100,39 @@ $Group "dedicated"
 	"tier1"
 }
 
+// Shaders Compile
 $Group "shaders"
 {
 	"stdshader_dx8"
 	"stdshader_dx9"
+}
+
+// Source Engine Authoring Tools
+$Group "utilities"
+{
+	"bspzip"
+	"captioncompiler"
+	"hammer_dll"
+	"hammer_launcher"
+	"hlmv"
+	"height2normal"
+	"height2ssbump"
+	"motionmapper"
+	"studiomdl"
+	"vbsp"
+	"vtex_dll"
+	"vtex_launcher"
+	"vrad_dll"
+	"vrad_launcher"
+	"vvis_dll"
+	"vvis_launcher"
+	"vtf2tga"
+	"vtfdiff"
+	"tgadiff"
+	"texturecompile_dll"
+	"texturecompile_launcher"
+	"vpk"
+	"makegamedata"
+	"makescenesimage"
+	"scenefilecache"
 }

@@ -34,14 +34,13 @@ $Configuration
 	$Compiler
 	{
         $PreprocessorDefinitions        "$BASE;MAKESCENESIMAGE"
-		$PreprocessorDefinitions		"$BASE;NO_X360_XDK" [$VS2015]
+		$PreprocessorDefinitions		"$BASE;NO_X360_XDK"
 		$AdditionalIncludeDirectories	"$BASE;$SRCDIR\x360xdk\include\win32\vs2005;$SRCDIR\game\shared"
 	}
 
 	$Linker
 	{
-		$AdditionalDependencies			"$BASE xgraphics.lib d3d9.lib legacy_stdio_definitions.lib"
-		$AdditionalDependencies			"$BASE xmaencoder.lib" [!$VS2015]
+		$AdditionalDependencies			"$BASE d3d9.lib legacy_stdio_definitions.lib"
 		$AdditionalLibraryDirectories	"$BASE;$SRCDIR\x360xdk\lib\win32\vs2005"
 	}
 }

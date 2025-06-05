@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Studiomdl"
+$Project "Studio MDL"
 {
 	$Folder	"Source Files"
 	{

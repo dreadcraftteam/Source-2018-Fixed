@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Bspzip"
+$Project "BSP Zip"
 {
 	$Folder	"Source Files"
 	{

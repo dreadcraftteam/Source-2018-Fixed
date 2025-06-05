@@ -42,7 +42,7 @@ $Configuration	"Release"
 	}
 }
 
-$Project "VTEX DLL"
+$Project "VTEX"
 {
 	$Folder	"Source Files"
 	{

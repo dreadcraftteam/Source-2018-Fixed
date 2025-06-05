@@ -62,7 +62,6 @@
 #include "movieobjects/dmecombinationoperator.h"
 #include "dmserializers/idmserializers.h"
 #include "tier2/p4helpers.h"
-#include "p4lib/ip4.h"
 #include "mdllib/mdllib.h"
 #include "perfstats.h"
 #include "worldsize.h"
@@ -2298,7 +2297,6 @@ int Option_Activity( s_sequence_t *psequence )
 int Option_ActivityModifier( s_sequence_t *psequence )
 {
 	GetToken(false);
-	V_strcpy_safe( psequence->activitymodifier[ psequence->numactivitymodifiers++ ].name, token );
 
 	return 0;
 }
@@ -9583,7 +9581,6 @@ bool CStudioMDLApp::Create()
 	if ( !CommandLine()->FindParm( "-nop4" ) )
 	{
 		AppModule_t p4Module = LoadModule( "p4lib.dll" );
-		AddSystem( p4Module, P4_INTERFACE_VERSION );
 	}
 
 	bool bOk = AddSystems( appSystems );

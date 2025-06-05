@@ -25,7 +25,7 @@ $Configuration
 	}
 }
 
-$Project "Vvis_launcher"
+$Project "VVIS (Launcher)"
 {
 	$Folder	"Source Files"
 	{

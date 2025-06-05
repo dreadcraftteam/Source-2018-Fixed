@@ -23,7 +23,7 @@ $Configuration
 	}
 }
 
-$Project "Motionmapper"
+$Project "Motion Mapper"
 {
 	$Folder	"Source Files"
 	{

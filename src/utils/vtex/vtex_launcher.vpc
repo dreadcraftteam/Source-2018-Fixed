@@ -24,7 +24,7 @@ $Configuration
 	}
 }
 
-$Project "Vtex_launcher"
+$Project "VTEX (Launcher)"
 {
 	$Folder	"Source Files"
 	{

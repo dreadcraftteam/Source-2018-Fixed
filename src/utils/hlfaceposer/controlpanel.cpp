@@ -791,6 +791,9 @@ void ControlPanel::CenterOnFace( void )
 //-----------------------------------------------------------------------------
 float ControlPanel::GetModelGap( void )
 {
+	if (!this)
+		return 0;
+
 	return slModelGap->getValue();
 }
 
