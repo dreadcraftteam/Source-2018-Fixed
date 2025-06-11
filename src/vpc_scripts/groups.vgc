@@ -19,7 +19,6 @@ $Group "game"
 // Everything Projects?
 $Group "everything"
 {
-	"appframework"
 	"bsppack"
 	"bugreporter"
 	"bugreporter_public"
